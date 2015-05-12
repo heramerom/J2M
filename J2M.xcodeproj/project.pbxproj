@@ -12,6 +12,17 @@
 		A247DC131B005D3000FE7921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A247DC121B005D3000FE7921 /* Images.xcassets */; };
 		A247DC161B005D3000FE7921 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A247DC141B005D3000FE7921 /* MainMenu.xib */; };
 		A247DC221B005D3000FE7921 /* J2MTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A247DC211B005D3000FE7921 /* J2MTests.m */; };
+		A247DC3B1B006ECB00FE7921 /* J2MClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A247DC361B006ECB00FE7921 /* J2MClass.m */; };
+		A247DC3C1B006ECB00FE7921 /* J2MProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A247DC381B006ECB00FE7921 /* J2MProperty.m */; };
+		A247DC3D1B006ECB00FE7921 /* J2MUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A247DC3A1B006ECB00FE7921 /* J2MUtils.m */; };
+		A247DC401B006EDB00FE7921 /* MJFoundation_J2M.m in Sources */ = {isa = PBXBuildFile; fileRef = A247DC3F1B006EDB00FE7921 /* MJFoundation_J2M.m */; };
+		A247DC431B006F0900FE7921 /* MJConst_J2M.m in Sources */ = {isa = PBXBuildFile; fileRef = A247DC421B006F0900FE7921 /* MJConst_J2M.m */; };
+		A24AA3901B018D1B00D4CFF5 /* Ad.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AA3831B018D1B00D4CFF5 /* Ad.m */; };
+		A24AA3911B018D1B00D4CFF5 /* Bag.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AA3851B018D1B00D4CFF5 /* Bag.m */; };
+		A24AA3931B018D1B00D4CFF5 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AA3891B018D1B00D4CFF5 /* Status.m */; };
+		A24AA3941B018D1B00D4CFF5 /* StatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AA38B1B018D1B00D4CFF5 /* StatusResult.m */; };
+		A24AA3951B018D1B00D4CFF5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AA38D1B018D1B00D4CFF5 /* Student.m */; };
+		A24AA3961B018D1B00D4CFF5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AA38F1B018D1B00D4CFF5 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,28 @@
 		A247DC1B1B005D3000FE7921 /* J2MTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = J2MTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A247DC201B005D3000FE7921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A247DC211B005D3000FE7921 /* J2MTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = J2MTests.m; sourceTree = "<group>"; };
+		A247DC351B006ECB00FE7921 /* J2MClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = J2MClass.h; sourceTree = "<group>"; };
+		A247DC361B006ECB00FE7921 /* J2MClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = J2MClass.m; sourceTree = "<group>"; };
+		A247DC371B006ECB00FE7921 /* J2MProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = J2MProperty.h; sourceTree = "<group>"; };
+		A247DC381B006ECB00FE7921 /* J2MProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = J2MProperty.m; sourceTree = "<group>"; };
+		A247DC391B006ECB00FE7921 /* J2MUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = J2MUtils.h; sourceTree = "<group>"; };
+		A247DC3A1B006ECB00FE7921 /* J2MUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = J2MUtils.m; sourceTree = "<group>"; };
+		A247DC3E1B006EDB00FE7921 /* MJFoundation_J2M.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation_J2M.h; sourceTree = "<group>"; };
+		A247DC3F1B006EDB00FE7921 /* MJFoundation_J2M.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation_J2M.m; sourceTree = "<group>"; };
+		A247DC411B006F0900FE7921 /* MJConst_J2M.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst_J2M.h; sourceTree = "<group>"; };
+		A247DC421B006F0900FE7921 /* MJConst_J2M.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJConst_J2M.m; sourceTree = "<group>"; };
+		A24AA3821B018D1B00D4CFF5 /* Ad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ad.h; sourceTree = "<group>"; };
+		A24AA3831B018D1B00D4CFF5 /* Ad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ad.m; sourceTree = "<group>"; };
+		A24AA3841B018D1B00D4CFF5 /* Bag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bag.h; sourceTree = "<group>"; };
+		A24AA3851B018D1B00D4CFF5 /* Bag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bag.m; sourceTree = "<group>"; };
+		A24AA3881B018D1B00D4CFF5 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		A24AA3891B018D1B00D4CFF5 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		A24AA38A1B018D1B00D4CFF5 /* StatusResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusResult.h; sourceTree = "<group>"; };
+		A24AA38B1B018D1B00D4CFF5 /* StatusResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusResult.m; sourceTree = "<group>"; };
+		A24AA38C1B018D1B00D4CFF5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		A24AA38D1B018D1B00D4CFF5 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		A24AA38E1B018D1B00D4CFF5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		A24AA38F1B018D1B00D4CFF5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +111,19 @@
 			children = (
 				A247DC0D1B005D3000FE7921 /* AppDelegate.h */,
 				A247DC0E1B005D3000FE7921 /* AppDelegate.m */,
+				A24AA3821B018D1B00D4CFF5 /* Ad.h */,
+				A24AA3831B018D1B00D4CFF5 /* Ad.m */,
+				A24AA3841B018D1B00D4CFF5 /* Bag.h */,
+				A24AA3851B018D1B00D4CFF5 /* Bag.m */,
+				A24AA3881B018D1B00D4CFF5 /* Status.h */,
+				A24AA3891B018D1B00D4CFF5 /* Status.m */,
+				A24AA38A1B018D1B00D4CFF5 /* StatusResult.h */,
+				A24AA38B1B018D1B00D4CFF5 /* StatusResult.m */,
+				A24AA38C1B018D1B00D4CFF5 /* Student.h */,
+				A24AA38D1B018D1B00D4CFF5 /* Student.m */,
+				A24AA38E1B018D1B00D4CFF5 /* User.h */,
+				A24AA38F1B018D1B00D4CFF5 /* User.m */,
+				A247DC341B006ECB00FE7921 /* J2M */,
 				A247DC121B005D3000FE7921 /* Images.xcassets */,
 				A247DC141B005D3000FE7921 /* MainMenu.xib */,
 				A247DC0B1B005D3000FE7921 /* Supporting Files */,
@@ -109,6 +155,23 @@
 				A247DC201B005D3000FE7921 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A247DC341B006ECB00FE7921 /* J2M */ = {
+			isa = PBXGroup;
+			children = (
+				A247DC351B006ECB00FE7921 /* J2MClass.h */,
+				A247DC361B006ECB00FE7921 /* J2MClass.m */,
+				A247DC371B006ECB00FE7921 /* J2MProperty.h */,
+				A247DC381B006ECB00FE7921 /* J2MProperty.m */,
+				A247DC391B006ECB00FE7921 /* J2MUtils.h */,
+				A247DC3A1B006ECB00FE7921 /* J2MUtils.m */,
+				A247DC3E1B006EDB00FE7921 /* MJFoundation_J2M.h */,
+				A247DC3F1B006EDB00FE7921 /* MJFoundation_J2M.m */,
+				A247DC411B006F0900FE7921 /* MJConst_J2M.h */,
+				A247DC421B006F0900FE7921 /* MJConst_J2M.m */,
+			);
+			path = J2M;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +273,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A24AA3911B018D1B00D4CFF5 /* Bag.m in Sources */,
 				A247DC111B005D3000FE7921 /* main.m in Sources */,
+				A24AA3951B018D1B00D4CFF5 /* Student.m in Sources */,
+				A24AA3931B018D1B00D4CFF5 /* Status.m in Sources */,
+				A247DC3D1B006ECB00FE7921 /* J2MUtils.m in Sources */,
+				A24AA3941B018D1B00D4CFF5 /* StatusResult.m in Sources */,
+				A247DC431B006F0900FE7921 /* MJConst_J2M.m in Sources */,
 				A247DC0F1B005D3000FE7921 /* AppDelegate.m in Sources */,
+				A24AA3961B018D1B00D4CFF5 /* User.m in Sources */,
+				A24AA3901B018D1B00D4CFF5 /* Ad.m in Sources */,
+				A247DC401B006EDB00FE7921 /* MJFoundation_J2M.m in Sources */,
+				A247DC3C1B006ECB00FE7921 /* J2MProperty.m in Sources */,
+				A247DC3B1B006ECB00FE7921 /* J2MClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +475,7 @@
 				A247DC271B005D3000FE7921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A247DC281B005D3000FE7921 /* Build configuration list for PBXNativeTarget "J2MTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +484,7 @@
 				A247DC2A1B005D3000FE7921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

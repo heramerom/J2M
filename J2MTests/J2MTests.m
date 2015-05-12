@@ -2,7 +2,7 @@
 //  J2MTests.m
 //  J2MTests
 //
-//  Created by XiaoHonglin on 15/5/11.
+//  Created by heramerom on 15/5/11.
 //  Copyright (c) 2015年 Amour. All rights reserved.
 //
 
