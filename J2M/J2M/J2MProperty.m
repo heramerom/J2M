@@ -30,7 +30,6 @@
     } else if (code.length == 0) {
         _KVCDisabled = YES;
     } else if (code.length > 3 && [code hasPrefix:@"@\""]) {
-        // 去掉@"和"，截取中间的类型名称
         _code = [code substringWithRange:NSMakeRange(2, code.length - 3)];
         _typeClass = NSClassFromString(_code);
         _fromFoundation = [MJFoundation_J2M isClassFromFoundation:_typeClass];
@@ -41,7 +40,6 @@
         _KVCDisabled = YES;
     }
     
-    // 是否为数字类型
     NSString *lowerCode = _code.lowercaseString;
     NSArray *numberTypes = @[MJTypeInt_J2M, MJTypeFloat_J2M, MJTypeDouble_J2M, MJTypeLong_J2M, MJTypeChar_J2M];
     if ([numberTypes containsObject:lowerCode]) {
