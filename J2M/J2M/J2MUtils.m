@@ -9,14 +9,17 @@
 #import "J2MUtils.h"
 #import "J2MClass.h"
 #import "J2MProperty.h"
+#import "MJFoundation_J2M.h"
 
 @implementation NSDictionary(J2M)
 
 - (id)toModel:(Class)cls
 {
+#if DEBUG
     if (![cls conformsToProtocol:@protocol(J2MProtocol)]) {
         NSAssert(NO, @"%@ must conform to <J2MProtocol>", cls);
     }
+#endif
     id model = [cls new];
     J2MClass *obj = [J2MClass objClassWithClass:cls];
     NSArray *properties = [obj properties];
@@ -32,21 +35,16 @@
             value = self[p.name];
         }
         
-        if (!value && [value isKindOfClass:[NSNull class]]) {
+        if (!value || [value isKindOfClass:[NSNull class]]) {
             continue;
         }
         
         if (value) {
-            if ([value isKindOfClass:[NSDictionary class]]) {
+            if ([value isKindOfClass:[NSDictionary class]] && !p.isFromFoundation) {
                 [model setValue:[value toModel:p.typeClass] forKey:p.name];
             }
-            else if ([value isKindOfClass:[NSArray class]]) {
-                if (p.arrayClass) {
-                    [model setValue:[value toModels:NSClassFromString(p.arrayClass)] forKey:p.name];
-                }
-                else {
-                    [model setValue:value forKey:p.name];
-                }
+            else if ([value isKindOfClass:[NSArray class]] && p.arrayClass) {
+                [model setValue:[value toModels:NSClassFromString(p.arrayClass)] forKey:p.name];
             }
             else {
                 [model setValue:value forKey:p.name];
@@ -62,9 +60,11 @@
 
 - (NSArray *)toModels:(Class)cls
 {
+#if DEBUG
     if (![cls conformsToProtocol:@protocol(J2MProtocol)]) {
         NSAssert(NO, @"%@ must conform to <J2MProtocol>", cls);
     }
+#endif
     NSMutableArray *models = [NSMutableArray array];
     for (NSDictionary *dict in self) {
         if ([dict isKindOfClass:[NSNull class]]) {

@@ -10,15 +10,9 @@
 
 @implementation StatusResult
 
-+ (NSString *)j2m_classInArray:(NSString *)cls
++ (NSDictionary *)j2m_arrayClasses
 {
-    if ([cls isEqualToString:@"statuses"]) {
-        return @"Status";
-    }
-    else if ([cls isEqualToString:@"ads"]) {
-        return @"Ad";
-    }
-    return nil;
+    return @{@"statuses" : @"Status", @"ads" : @"Ad"};
 }
 
 @end

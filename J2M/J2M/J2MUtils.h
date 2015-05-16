@@ -12,14 +12,10 @@
 @protocol J2MProtocol <NSObject>
 
 @optional
-
-+ (BOOL)j2m_wasPropertyIngored:(NSString *)name;
-
-+ (NSString *)j2m_keyMap:(NSString *)key;
-
-+ (NSString *)j2m_keyPath:(NSString *)path;
-
-+ (NSString *)j2m_classInArray:(NSString *)cls;
++ (NSArray *)j2m_ignoreProperties;
++ (NSDictionary *)j2m_keyMaps;
++ (NSDictionary *)j2m_keyPaths;
++ (NSDictionary *)j2m_arrayClasses;
 
 @end
 

@@ -56,27 +56,48 @@ static NSMutableDictionary *s_classCacheed;
         while (![MJFoundation_J2M isClassFromFoundation:c]) {
             unsigned int outCount = 0;
             objc_property_t *ps = class_copyPropertyList(c, &outCount);
+            
+            NSArray *ignores = nil;
+            if (class_getClassMethod(self.cls, @selector(j2m_ignoreProperties))) {
+                ignores = [self.cls j2m_ignoreProperties];
+            }
+            
+            NSDictionary *keyPaths = nil;
+            if (class_getClassMethod(self.cls, @selector(j2m_keyPaths))) {
+                keyPaths = [self.cls j2m_keyPaths];
+            }
+            
+            NSDictionary *keyMaps = nil;
+            if (class_getClassMethod(self.cls, @selector(j2m_keyMaps))) {
+                keyMaps = [self.cls j2m_keyMaps];
+            }
+            
+            NSDictionary *clses = nil;
+            if (class_getClassMethod(self.cls, @selector(j2m_arrayClasses))) {
+                clses = [self.cls j2m_arrayClasses];
+            }
+            
             for (unsigned int i = 0; i < outCount; i ++ ) {
                 objc_property_t t = ps[i];
                 
                 NSString *name = @(property_getName(t));
                 
-                if ([c resolveClassMethod:@selector(j2m_wasPropertyIngored:)] && [self.cls j2m_wasPropertyIngored:name]) {
+                if ([ignores containsObject:name]) {
                     continue;
                 }
                 
                 J2MProperty *objp = [J2MProperty new];
-                if (class_getClassMethod(c, @selector(j2m_keyPath:)) && [self.cls j2m_keyPath:name]) {
-                    objp.keyPath = [self.cls j2m_keyPath:name];
+                if ([[keyPaths allKeys] containsObject:name]) {
+                    objp.keyPath = [keyPaths valueForKey:name];
                     objp.name = name;
                 }
-                else if (class_getClassMethod(c, @selector(j2m_keyMap:)) && [self.cls j2m_keyMap:name]) {
-                    objp.key = [self.cls j2m_keyMap:name];
+                else if ([[keyMaps allKeys] containsObject:name]) {
+                    objp.key = [keyMaps valueForKey:name];
                     objp.name = name;
                 }
                 
-                if (class_getClassMethod(c, @selector(j2m_classInArray:)) && [self.cls j2m_classInArray:name]) {
-                    objp.arrayClass = [self.cls j2m_classInArray:name];
+                if ([[clses allKeys] containsObject:name]) {
+                    objp.arrayClass = [clses valueForKey:name];
                 }
                 
                 objp.property = ps[i];
