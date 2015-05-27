@@ -71,3 +71,17 @@
 }
 
 @end
+
+@implementation NSNull(J2M)
+
+- (NSArray *)toModels:(Class)cls
+{
+    return nil;
+}
+
+- (id)toModel:(Class)cls
+{
+    return nil;
+}
+
+@end

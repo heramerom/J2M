@@ -49,6 +49,10 @@
     NSLog(@"model = %@", m);
     
     
+    [[NSNull null] toModel:[Model class]];
+    
+    [[NSNull null] toModels:[Model class]];
+    
 }
 
 - (void)testExample1

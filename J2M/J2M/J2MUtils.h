@@ -31,3 +31,12 @@
 
 @end
 
+@interface NSNull(J2M)
+
+- (NSArray *)toModels:(Class)cls;
+
+- (id)toModel:(Class)cls;
+
+@end
+
+
