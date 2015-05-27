@@ -23,6 +23,8 @@
 		A24AA3941B018D1B00D4CFF5 /* StatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AA38B1B018D1B00D4CFF5 /* StatusResult.m */; };
 		A24AA3951B018D1B00D4CFF5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AA38D1B018D1B00D4CFF5 /* Student.m */; };
 		A24AA3961B018D1B00D4CFF5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A24AA38F1B018D1B00D4CFF5 /* User.m */; };
+		A24D5FBA1B15733D0076A5D1 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = A24D5FB91B15733D0076A5D1 /* Model.m */; };
+		A24D5FBC1B1574310076A5D1 /* ModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A24D5FBB1B1574310076A5D1 /* ModelTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,9 @@
 		A24AA38D1B018D1B00D4CFF5 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		A24AA38E1B018D1B00D4CFF5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		A24AA38F1B018D1B00D4CFF5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		A24D5FB81B15733D0076A5D1 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		A24D5FB91B15733D0076A5D1 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		A24D5FBB1B1574310076A5D1 /* ModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +128,8 @@
 				A24AA38D1B018D1B00D4CFF5 /* Student.m */,
 				A24AA38E1B018D1B00D4CFF5 /* User.h */,
 				A24AA38F1B018D1B00D4CFF5 /* User.m */,
+				A24D5FB81B15733D0076A5D1 /* Model.h */,
+				A24D5FB91B15733D0076A5D1 /* Model.m */,
 				A247DC341B006ECB00FE7921 /* J2M */,
 				A247DC121B005D3000FE7921 /* Images.xcassets */,
 				A247DC141B005D3000FE7921 /* MainMenu.xib */,
@@ -136,6 +143,7 @@
 			children = (
 				A247DC0C1B005D3000FE7921 /* Info.plist */,
 				A247DC101B005D3000FE7921 /* main.m */,
+				A24D5FBB1B1574310076A5D1 /* ModelTest.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 				A24AA3961B018D1B00D4CFF5 /* User.m in Sources */,
 				A24AA3901B018D1B00D4CFF5 /* Ad.m in Sources */,
 				A247DC401B006EDB00FE7921 /* MJFoundation_J2M.m in Sources */,
+				A24D5FBA1B15733D0076A5D1 /* Model.m in Sources */,
 				A247DC3C1B006ECB00FE7921 /* J2MProperty.m in Sources */,
 				A247DC3B1B006ECB00FE7921 /* J2MClass.m in Sources */,
 			);
@@ -294,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A247DC221B005D3000FE7921 /* J2MTests.m in Sources */,
+				A24D5FBC1B1574310076A5D1 /* ModelTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,11 +15,9 @@
 
 - (id)toModel:(Class)cls
 {
-#if DEBUG
-    if (![cls conformsToProtocol:@protocol(J2MProtocol)]) {
-        NSAssert(NO, @"%@ must conform to <J2MProtocol>", cls);
-    }
-#endif
+    
+    NSAssert([cls conformsToProtocol:@protocol(J2MProtocol)], @"%@ must conform to <J2MProtocol>", NSStringFromClass(cls));
+    
     id model = [cls new];
     J2MClass *obj = [J2MClass objClassWithClass:cls];
     NSArray *properties = [obj properties];
@@ -60,11 +58,8 @@
 
 - (NSArray *)toModels:(Class)cls
 {
-#if DEBUG
-    if (![cls conformsToProtocol:@protocol(J2MProtocol)]) {
-        NSAssert(NO, @"%@ must conform to <J2MProtocol>", cls);
-    }
-#endif
+    NSAssert([cls conformsToProtocol:@protocol(J2MProtocol)], @"%@ must conform to <J2MProtocol>", NSStringFromClass(cls));
+    
     NSMutableArray *models = [NSMutableArray array];
     for (NSDictionary *dict in self) {
         if ([dict isKindOfClass:[NSNull class]]) {
