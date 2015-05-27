@@ -23,6 +23,7 @@
 @property (nonatomic, readonly, getter = isKVCDisabled) BOOL KVCDisabled;
 @property (nonatomic, readonly, getter=isIdType) BOOL idType;
 @property (nonatomic, readonly) Class typeClass;
+@property (nonatomic, readonly, getter=isReadonly) BOOL readonly;
 @property (nonatomic, readonly, getter = isFromFoundation) BOOL fromFoundation;
 @property (nonatomic, readonly, getter=isNumberType) BOOL numberType;
 

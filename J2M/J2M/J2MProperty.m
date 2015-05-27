@@ -14,29 +14,36 @@
 
 - (void)setProperty:(objc_property_t)property
 {
-    NSString *attrs = @(property_getAttributes(property));
-    NSUInteger loc = 1;
-    NSUInteger len = [attrs rangeOfString:@","].location - loc;
-    
-    NSString *code = [attrs substringWithRange:NSMakeRange(loc, len)];
+    unsigned int count = 0;
+    objc_property_attribute_t *ts = property_copyAttributeList(property, &count);
+    for (int i = 0; i < count; i ++) {
+        if (strcmp("T", ts[i].name) == 0) {
+            _code = @(ts[i].value);
+        }
+        else if (strcmp("R", ts[i].name) == 0) {
+            _readonly = YES;
+            free(ts);
+            return;
+        }
+    }
+    free(ts);
     
     _name = @(property_getName(property));
-    _code = code;
+    
+    NSAssert(_code != nil, @"code can not be nil!");
 
-    NSAssert(code != nil, @"code can not be nil!");
-
-    if ([code isEqualToString:MJTypeId_J2M]) {
+    if ([_code isEqualToString:MJTypeId_J2M]) {
         _idType = YES;
-    } else if (code.length == 0) {
+    } else if (_code.length == 0) {
         _KVCDisabled = YES;
-    } else if (code.length > 3 && [code hasPrefix:@"@\""]) {
-        _code = [code substringWithRange:NSMakeRange(2, code.length - 3)];
+    } else if (_code.length > 3 && [_code hasPrefix:@"@\""]) {
+        _code = [_code substringWithRange:NSMakeRange(2, _code.length - 3)];
         _typeClass = NSClassFromString(_code);
         _fromFoundation = [MJFoundation_J2M isClassFromFoundation:_typeClass];
         _numberType = (_typeClass == [NSNumber class] || [_typeClass isSubclassOfClass:[NSNumber class]]);
-    } else if ([code isEqualToString:MJTypeSEL_J2M] ||
-               [code isEqualToString:MJTypeIvar_J2M] ||
-               [code isEqualToString:MJTypeMethod_J2M]) {
+    } else if ([_code isEqualToString:MJTypeSEL_J2M] ||
+               [_code isEqualToString:MJTypeIvar_J2M] ||
+               [_code isEqualToString:MJTypeMethod_J2M]) {
         _KVCDisabled = YES;
     }
     

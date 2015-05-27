@@ -101,12 +101,13 @@ static NSMutableDictionary *s_classCacheed;
                 }
                 
                 objp.property = ps[i];
-                
-                if (!objp.isKVCDisabled) {
+                // If the property is readonly, ignore
+                if (!objp.isReadonly && !objp.isKVCDisabled) {
                     [properties addObject:objp];
                 }
             }
             free(ps);
+            
             c = class_getSuperclass(c);
         }
         _properties = properties;
